@@ -29,7 +29,7 @@ class Song
   end
   
   def self.genre_count
-    
+    @@genres.insert(Hash.new(0))
   end
   
   def self.artist_count
