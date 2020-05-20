@@ -20,6 +20,10 @@ class Song
     @@count
   end
   
+  def self.artist_count
+    @@artists.inject(Hash.new(0)) { |x, y| x[y] += 1; return x}
+  end
+  
   def self.artists
     @@artists.uniq
   end
@@ -31,14 +35,6 @@ class Song
   def self.genre_count
     @@genres.insert(Hash.new(0)) { |x, y| x[y] += 1; return x}
   end
-  
-  def self.artist_count
-    @@artists.inject(Hash.new(0)) { |x, y| x[y] += 1; return x}
-  end
-  
-  
-  
-  
   
   
 end
