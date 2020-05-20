@@ -33,7 +33,7 @@ class Song
   end
   
   def self.artist_count
-    @@artists.insert(Hash.new(0)) { |x, y| x[y] += 1; return x}
+    @@artists.inject(Hash.new(0)) { |x, y| x[y] += 1; return x}
   end
   
   
