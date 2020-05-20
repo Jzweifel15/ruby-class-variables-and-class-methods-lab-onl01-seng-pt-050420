@@ -22,11 +22,7 @@ class Song
   
   def self.artists
     artists_list = []
-    @@artists.collect do |x, y|
-      if x != y
-        artists_list.push(x)
-      end
-    end
+    
   end
   
   def self.genres
