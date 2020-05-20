@@ -20,18 +20,6 @@ class Song
     @@count
   end
   
-  def self.artist_count
-    artists_hash = {}
-    @@artists.each do |artist|
-      if artists_hash[artist]
-        artists_hash[artist] += 1 
-      else
-        artists_hash[artist] = 1
-      end
-    end
-    return artists_hash
-  end
-  
   def self.artists
     @@artists.uniq
   end
@@ -50,6 +38,18 @@ class Song
       end
     end
     return genres_hash
+  end
+  
+    def self.artist_count
+    artists_hash = {}
+    @@artists.each do |artist|
+      if artists_hash[artist]
+        artists_hash[artist] += 1 
+      else
+        artists_hash[artist] = 1
+      end
+    end
+    return artists_hash
   end
   
   
