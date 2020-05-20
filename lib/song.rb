@@ -33,7 +33,10 @@ class Song
   end
   
   def self.genre_count
-    @@genres.insert(Hash.new(0)) { |x, y| x[y] += 1; return x}
+    genres_hash = {}
+    @@genres.each do |genre|
+      genres_hash[genre]
+    end
   end
   
   
