@@ -21,7 +21,8 @@ class Song
   end
   
   def self.artists
-    @@artists
+    artists_list = []
+    artists_list.push(@@artists.uniq)
   end
   
   def self.genres
