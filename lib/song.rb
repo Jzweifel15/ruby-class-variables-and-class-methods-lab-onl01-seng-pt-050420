@@ -22,8 +22,10 @@ class Song
   
   def self.artists
     artists_list = []
-    artists_list.push(@@artists.uniq)
-    return artists_list
+    @@artists.collect do |x, y|
+      if x != y
+        artists_list.push(x)
+    end
   end
   
   def self.genres
