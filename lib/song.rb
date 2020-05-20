@@ -21,7 +21,15 @@ class Song
   end
   
   def self.artist_count
-    @@artists.inject(Hash.new(0)) { |x, y| x[y] += 1; return x}
+    artists_hash = {}
+    @@artists.each do |artist|
+      if artists_hash[artist]
+        artists_hash[artist] += 1 
+      else
+        artists_hash[artist] = 1
+      end
+    end
+    return artists_hash
   end
   
   def self.artists
