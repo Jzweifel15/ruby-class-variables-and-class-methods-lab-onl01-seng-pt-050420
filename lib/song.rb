@@ -29,10 +29,11 @@ class Song
   end
   
   def self.genre_count
-    @@genres.insert(Hash.new(0).to_i)
+    @@genres.insert(Hash.new(0))
   end
   
   def self.artist_count
+    @@artists.insert(Hash.new(0))
   end
   
   
