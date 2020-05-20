@@ -25,6 +25,7 @@ class Song
     @@artists.collect do |x, y|
       if x != y
         artists_list.push(x)
+      end
     end
   end
   
